@@ -13,7 +13,7 @@ function index()
 	end
 
 	entry({"admin", "services", "frpc"},
-		firstchild(), _("Frpc")).dependent = false
+		firstchild(), _("Frpc")).acl_depends = { "luci-app-frpc" }
 
 	entry({"admin", "services", "frpc", "common"},
 		cbi("frpc/common"), _("Settings"), 1)
